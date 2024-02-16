@@ -15,8 +15,6 @@ class Person
 			this->age = age;
 		}
 
-		Person();
-
-		virtual void show();
+		virtual string show() = 0;	
 };
 

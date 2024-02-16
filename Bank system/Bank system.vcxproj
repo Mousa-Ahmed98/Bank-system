@@ -127,15 +127,25 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Accountant.cpp" />
     <ClCompile Include="Bank system.cpp" />
+    <ClCompile Include="BankTellers.cpp" />
+    <ClCompile Include="BanqQueue.cpp" />
     <ClCompile Include="Client.cpp" />
     <ClCompile Include="MemberShip.cpp" />
     <ClCompile Include="person.cpp" />
+    <ClCompile Include="Role.cpp" />
+    <ClCompile Include="Time.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Accountant.h" />
+    <ClInclude Include="BankTellers.h" />
+    <ClInclude Include="BanqQueue.h" />
     <ClInclude Include="Client.h" />
     <ClInclude Include="MemberShip.h" />
     <ClInclude Include="Person.h" />
+    <ClInclude Include="Role.h" />
+    <ClInclude Include="Time.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
