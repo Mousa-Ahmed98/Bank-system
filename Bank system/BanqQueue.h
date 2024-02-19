@@ -2,9 +2,12 @@
 #include "Client.h"
 #include <vector>
 #include <queue>
+#include<string>
+using namespace std;
 
-struct com {
+struct comb {
     bool operator()(Client* c1, Client* c2) {
+        
         if (c1->needSpecialNeeds && !c2->needSpecialNeeds)
             return false;
         else if (c2->needSpecialNeeds && !c1->needSpecialNeeds)
@@ -25,11 +28,12 @@ struct com {
 
 class BanqQueue
 {
+    
     static int startingPriority;
 public:
-    priority_queue<Client*, vector<Client*>, com> clientsQueue;
+    priority_queue<Client*, vector<Client*>, comb> clientsQueue;
     BanqQueue() {
-
+        
     }
 
     void Enqueue(Client* c) {
@@ -43,11 +47,73 @@ public:
         }
     }
 
-    void display() {
-        priority_queue<Client*, vector<Client*>, com> tempQueue = clientsQueue;
+    bool isEmpty() {
+        return clientsQueue.empty();
+    }
+
+    Client* top() {
+        return clientsQueue.top();
+    }
+    
+
+    
+
+    void displayStatus() {
+        priority_queue<Client*, vector<Client*>, comb> tempQueue = clientsQueue;
         while (!tempQueue.empty()) {
-            cout << tempQueue.top()->name<<endl;
+            cout << "------------------------------------------------------------------------"<<endl;
+            
+            printAwesome(tempQueue.top()->name, 1);
+            cout << "    ";
+
+            printAwesome(to_string(tempQueue.top()->arrivalTime), 0);
+            cout << "    ";
+
+            printAwesome(to_string(tempQueue.top()->serviceTime), 0);
+            cout << "    ";
+
+            printAwesome(to_string(tempQueue.top()->getWaitingTime()), 0);
+            cout << "    ";
+
+            printAwesome(tempQueue.top()->assignedTo, 0);
+            
+            cout << endl << "------------------------------------------------------------------------" << endl;
+
+            cout << endl << endl;
             tempQueue.pop();
+        }
+    }
+
+    void printAwesome(string s, bool nameFlag) {
+        for (int i = 0; i < s.length(); i++) {
+            cout << s[i];
+            int j = 0;
+            while (j < 8000000) {
+                j++;
+            }
+        }
+
+        if (nameFlag) {
+            int t = 25 - s.length();
+            for (int i = 0; i < t; i++) {
+                cout << " ";
+                int j = 0;
+                while (j < 1000000) {
+                    j++;
+                }
+            }
+        }
+        else
+            
+        {
+            int t = 5 - s.length();
+            for (int i = 0; i < t; i++) {
+                cout << " ";
+                int j = 0;
+                while (j < 1000000) {
+                    j++;
+                }
+            }
         }
     }
 };
