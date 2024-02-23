@@ -1,0 +1,15 @@
+1,Rawan,21,GoldenAccount,1,75,10
+2,Mousa,25,GoldenAccount,1,62,12
+3,Ahmed,29,OrdinaryAccount,1,64,8
+4,Ali,23,OrdinaryAccount,0,68,9
+5,Murad,33,OrdinaryAccount,0,62,10
+6,Murad,33,OrdinaryAccount,0,0,3
+7,Soliman,33,OrdinaryAccount,0,12,5
+8,Bassam,33,OrdinaryAccount,0,2,2
+9,Mousa,33,OrdinaryAccount,0,10,3
+10,Sayed,33,OrdinaryAccount,0,4,5
+11,Shaaban,33,OrdinaryAccount,0,5,4
+12,Samir,33,OrdinaryAccount,0,1,7
+13,Ragab,33,OrdinaryAccount,0,7,4
+14,Abdo,33,OrdinaryAccount,0,8,6
+15,Nader,33,OrdinaryAccount,0,11,2
